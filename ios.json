@@ -1,0 +1,94 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVWKInAppBrowser\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "*-Info.plist": {
+        "parents": {
+          "NSLocationWhenInUseUsageDescription": [
+            {
+              "xml": "<string> </string>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "onex.irland.hotel"
+    },
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "onex.irland.hotel"
+    },
+    "cordova-plugin-geolocation": {
+      "GEOLOCATION_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "onex.irland.hotel"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open"
+      ]
+    },
+    {
+      "id": "cordova-plugin-geolocation.Coordinates",
+      "file": "plugins/cordova-plugin-geolocation/www/Coordinates.js",
+      "pluginId": "cordova-plugin-geolocation",
+      "clobbers": [
+        "Coordinates"
+      ]
+    },
+    {
+      "id": "cordova-plugin-geolocation.PositionError",
+      "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
+      "pluginId": "cordova-plugin-geolocation",
+      "clobbers": [
+        "PositionError"
+      ]
+    },
+    {
+      "id": "cordova-plugin-geolocation.Position",
+      "file": "plugins/cordova-plugin-geolocation/www/Position.js",
+      "pluginId": "cordova-plugin-geolocation",
+      "clobbers": [
+        "Position"
+      ]
+    },
+    {
+      "id": "cordova-plugin-geolocation.geolocation",
+      "file": "plugins/cordova-plugin-geolocation/www/geolocation.js",
+      "pluginId": "cordova-plugin-geolocation",
+      "clobbers": [
+        "navigator.geolocation"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-inappbrowser": "6.0.0",
+    "cordova-plugin-compat": "1.2.0",
+    "cordova-plugin-geolocation": "2.4.3"
+  }
+}
